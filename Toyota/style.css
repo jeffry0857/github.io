@@ -1,5 +1,6 @@
 .wrap{
-    width: 1263px;
+    width: 1200px;
+    margin: auto;
 }
 .topper h2{
     font-size: 40px;
@@ -31,10 +32,11 @@
     border-style: dotted;
     border-color: gray;
     border-bottom: solid #9d190b 3px;
-    transition: 1s;
+    transition: 0.5s;
 }
 .nav a:hover{
     border-bottom: solid #9d190b 38px;
+    color: white;
 }
 .column{
     height: 950px;
