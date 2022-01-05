@@ -70,6 +70,13 @@
     display: flex;
     margin: auto;
 }
+.content-title{
+    font-size: 27px;
+    margin-left: 32px;
+}
+.content-paragraph{
+    margin-left: 32px;
+}
 .left-content{
     width: 50%;
     display: flex;
@@ -78,11 +85,6 @@
 }
 .left-content img{
     width: 100%;
-}
-.con-title{
-    font-size: 38px;
-    line-height: 1.315em;
-    padding: 0;
 }
 .right-content{
     width: 50%;
@@ -96,6 +98,7 @@
     text-decoration: none;
     padding: 15px;
     border-radius: 10px;
+    margin-left: 32px;
 }
 .green-btn:nth-child(even){
     background-color: #fff;
@@ -126,10 +129,6 @@
     text-decoration: none;
     font-size: 18px;
     color: #5D6678;
-}
-.content-title{
-    font-size: 27px;
-    padding-left: 32px;
 }
 .project-pic{
     padding: 20px;
