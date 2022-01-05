@@ -34,6 +34,12 @@
     margin: 10px;
     text-decoration: none;
 }
+.link:first-child{
+    border-bottom: solid #ADB6C7;
+}
+.link:hover{
+    border-bottom: solid #ADB6C7;
+}
 .subscribe{
     width: 20%;
     display: flex;
