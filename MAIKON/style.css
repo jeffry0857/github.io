@@ -86,7 +86,8 @@
     width: 50%;
 }
 .right-content{
-    width: 50%;
+    display: flex;
+    /* margin: 40px; */
 }
 .right-content img{
     max-width: 90%;
