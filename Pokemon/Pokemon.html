@@ -13,13 +13,13 @@
     <button onclick='fetchPokemon()'>載入寶可夢圖鑑列表fetchPokemon()</button>
     <button onclick='fetchPokemon_appendChild()'>載入寶可夢圖鑑列表appendChild()</button>
     <button onclick='addPokemon()'>加一隻寶可夢</button>
+    <button onclick='removePokemon()'>減少一隻寶可夢</button>
     <button id='reset' onclick="resetPokemon()">Reset</button>
 
     <div id='container'></div>
 
     <script>
         let container = document.getElementById('container');
-
         window.onload = setPokemon();
         let index = 2;
 
@@ -103,25 +103,13 @@
                 index++; //001 --> 002
             }
 
-        function addPokemon() {
-            if(index < 898){
-                //addPokemon.onclick = function add(){} //click addPokemon 後啟用add方法
+        function removePokemon() {
+            if(container.lastChild!==null){
+                container.removeChild(container.lastChild);
+            }     
 
-                let img = document.createElement("img");
-
-                let fileName = index.toString().padStart(3,"0"); // 3 refers to 要 3 位數 , 0代表從左開始補 0 // 用toString是為配合padStart
-                let pathfile = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${fileName}.png`;
-
-                img.setAttribute("src",pathfile); //
-                
-
-                // let pokemonImg = `<img src='${pathfile}'/>`; //將pathfile丟進src裡
-                // container.innerHTML += pokemonImg; // 將<img>塞進<div id='container'> </div>
-
-                container.appendChild(img); //將img從後面補上
-                index++; //001 --> 002
-            }
         }
+
     }
     </script>
     
