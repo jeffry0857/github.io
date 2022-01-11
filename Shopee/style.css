@@ -11,13 +11,23 @@
     flex-wrap: wrap;
     align-content: center;
 }
-.left-nav span{
+.fab{
+    margin: 5px;
+    font-size: 16px;
+}
+.far{
+    margin-right: 5px;
+}
+.fas{
+    margin-right: 5px;
+}
+.left-nav{
     color: white;
     font-size: 14px;
     padding: 5px;
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
+    align-items: center;
 }
 .nav-bar{
     width: 100%;
@@ -77,6 +87,7 @@
     box-sizing: border-box;
 }
 .search-btn{
+    color: white;
     background-color: #ee4d2d;
     height: 30px;
     width: 45px;
@@ -280,6 +291,7 @@ figcaption{
     background-color: #fff;
 }
 .limited-sale-title{
+    margin-bottom: 35px;
     display: flex;
     justify-content: space-between;
 }
@@ -293,7 +305,62 @@ figcaption{
 .limited-sale-items{
     display: flex;
 }
+.limited-sale-item a{
+    position: relative;
+    text-decoration: none;
+}
 .limited-sale-items img{
     width: 100%;
 }
-
+.promote{
+    position: absolute;
+    bottom: 25px;
+}
+.limited-sale-item-discount{
+    color: #ee4d2d;
+    background-color: rgba(255,212,36,.9);
+    width: 44px;
+    height: 40px;
+    position: absolute;
+    left: 169px;
+    bottom: 176px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.limited-sale-item-discount::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 22px solid rgba(255,212,36,.9);
+    border-right: 22px solid rgba(255,212,36,.9);
+    border-bottom: 8px solid transparent;
+    left: 0;
+    top: 100%;
+}
+.sale-progress-bar{
+    color: white;
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffbda6;
+    width: 155px;
+    height: 18px;
+    border-radius: 8px;
+}
+.limited-sale-item-price{
+    color: rgb(238, 77, 45);
+    font-size: 24px;
+    background-color: #fff;
+    margin-top: -24px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: center;
+}
+.limited-sale-item-price::first-letter{
+    font-size: 15px;
+}
