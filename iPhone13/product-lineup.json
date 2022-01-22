@@ -1,0 +1,46 @@
+{
+    "ipad-pro":[
+        { 
+            "id": "P001",
+            "type": "ipad-pro",
+            "color": "太空灰色", 
+            "price": 18900, 
+            "storage": "128GB", 
+            "network": "Wi-Fi", 
+            "picture": "gray.png" 
+        }
+    ],
+
+    "ipad-mini":[
+        { 
+            "id": "M001", 
+            "color": "太空灰色", 
+            "price": 18900, 
+            "storage": "128GB", 
+            "network": "Wi-Fi", 
+            "picture": "gray.png" 
+        }
+    ],
+
+    "ipad":[
+        { 
+        "id": "I001", 
+        "color": "太空灰色", 
+        "price": 18900, 
+        "storage": "128GB", 
+        "network": "Wi-Fi", 
+        "picture": "gray.png" 
+        }
+    ],
+
+    "ipad-air":[
+        { 
+        "id": "A001", 
+        "color": "太空灰色", 
+        "price": 18900, 
+        "storage": "128GB", 
+        "network": "Wi-Fi", 
+        "picture": "gray.png" 
+        }
+    ]
+}

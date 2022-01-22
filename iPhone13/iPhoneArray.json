@@ -1,0 +1,41 @@
+const appleData = [
+    { "size": "PRO", "color": "天峰藍色", "price": 32900, "storage": "128GB", "network": "Wi-Fi", "picture": "./photos/xr-blue.png" },
+    { "size": "PRO", "color": "銀色", "price": 32900, "storage": "128GB", "network": "Wi-Fi", "picture": "./photos/xr-silver.png" },
+    { "size": "PRO", "color": "金色", "price": 32900, "storage": "128GB", "network": "Wi-Fi", "picture": "./photos/xr-gold.png" },
+    { "size": "PRO", "color": "石墨色", "price": 32900, "storage": "128GB", "network": "Wi-Fi", "picture": "./photos/xr-black.png" },
+
+    { "size": "PRO", "color": "天峰藍色", "price": 36400, "storage": "256GB", "network": "Wi-Fi", "picture": "./photos/xr-blue.png" },
+    { "size": "PRO", "color": "銀色", "price": 36400, "storage": "256GB", "network": "Wi-Fi", "picture": "./photos/xr-silver.png" },
+    { "size": "PRO", "color": "金色", "price": 36400, "storage": "256GB", "network": "Wi-Fi", "picture": "./photos/xr-gold.png" },
+    { "size": "PRO", "color": "石墨色", "price": 36400, "storage": "256GB", "network": "Wi-Fi", "picture": "./photos/xr-black.png" },
+
+    { "size": "PRO", "color": "天峰藍色", "price": 43400, "storage": "512GB", "network": "Cellular", "picture": "./photos/xr-blue.png" },
+    { "size": "PRO", "color": "銀色", "price": 43400, "storage": "512GB", "network": "Cellular", "picture": "./photos/xr-silver.png" },
+    { "size": "PRO", "color": "金色", "price": 43400, "storage": "512GB", "network": "Cellular", "picture": "./photos/xr-gold.png" },
+    { "size": "PRO", "color": "石墨色", "price": 43400, "storage": "512GB", "network": "Cellular", "picture": "./photos/xr-black.png" },
+
+    { "size": "PRO", "color": "天峰藍色", "price": 50400, "storage": "1TB", "network": "Cellular", "picture": "./photos/xr-blue.png" },
+    { "size": "PRO", "color": "銀色", "price": 50400, "storage": "1TB", "network": "Cellular", "picture": "./photos/xr-silver.png" },
+    { "size": "PRO", "color": "金色", "price": 50400, "storage": "1TB", "network": "Cellular", "picture": "./photos/xr-gold.png" },
+    { "size": "PRO", "color": "石墨色", "price": 50400, "storage": "1TB", "network": "Cellular", "picture": "./photos/xr-black.png" },
+
+    { "size": "PRO-MAX", "color": "天峰藍色", "price": 36900, "storage": "128GB", "network": "Wi-Fi", "picture": "./photos/xr-blue.png" },
+    { "size": "PRO-MAX", "color": "銀色", "price": 36900, "storage": "128GB", "network": "Wi-Fi", "picture": "./photos/xr-silver.png" },
+    { "size": "PRO-MAX", "color": "金色", "price": 36900, "storage": "128GB", "network": "Wi-Fi", "picture": "./photos/xr-gold.png" },
+    { "size": "PRO-MAX", "color": "石墨色", "price": 36900, "storage": "128GB", "network": "Wi-Fi", "picture": "./photos/xr-black.png" },
+
+    { "size": "PRO-MAX", "color": "天峰藍色", "price": 40400, "storage": "256GB", "network": "Wi-Fi", "picture": "./photos/xr-blue.png" },
+    { "size": "PRO-MAX", "color": "銀色", "price": 40400, "storage": "256GB", "network": "Wi-Fi", "picture": "./photos/xr-silver.png" },
+    { "size": "PRO-MAX", "color": "金色", "price": 40400, "storage": "256GB", "network": "Wi-Fi", "picture": "./photos/xr-gold.png" },
+    { "size": "PRO-MAX", "color": "石墨色", "price": 40400, "storage": "256GB", "network": "Wi-Fi", "picture": "./photos/xr-black.png" },
+
+    { "size": "PRO-MAX", "color": "天峰藍色", "price": 47400, "storage": "512GB", "network": "Cellular", "picture": "./photos/xr-blue.png" },
+    { "size": "PRO-MAX", "color": "銀色", "price": 47400, "storage": "512GB", "network": "Cellular", "picture": "./photos/xr-silver.png" },
+    { "size": "PRO-MAX", "color": "金色", "price": 47400, "storage": "512GB", "network": "Cellular", "picture": "./photos/xr-gold.png" },
+    { "size": "PRO-MAX", "color": "石墨色", "price": 47400, "storage": "512GB", "network": "Cellular", "picture": "./photos/xr-black.png" },
+
+    { "size": "PRO-MAX", "color": "天峰藍色", "price": 54400, "storage": "1TB", "network": "Cellular", "picture": "./photos/xr-blue.png" },
+    { "size": "PRO-MAX", "color": "銀色", "price": 54400, "storage": "1TB", "network": "Cellular", "picture": "./photos/xr-silver.png" },
+    { "size": "PRO-MAX", "color": "金色", "price": 54400, "storage": "1TB", "network": "Cellular", "picture": "./photos/xr-gold.png" },
+    { "size": "PRO-MAX", "color": "石墨色", "price": 54400, "storage": "1TB", "network": "Cellular", "picture": "./photos/xr-black.png" }
+]
