@@ -89,10 +89,10 @@
                 heroCard.querySelector('.btn').onclick = function () {
                     document.querySelector('#exampleModalLabel').innerText = hero.name
                     document.querySelector('.photo').src = `https://cdngarenanow-a.akamaihd.net/games/lol/2020/LOLwebsite/champion/${hero.id}_0.jpg`
-                    document.querySelector('.hp').innerText = `HP：${hero.hp}`
-                    document.querySelector('.move_speed').innerText = `Move Speed：${hero.movespeed}`
-                    document.querySelector('.spell_block').innerText = `Spell Block：${hero.spellblock}`
-                    document.querySelector('.attack_range').innerText = `Attack Range：${hero.attackrange}`
+                    document.querySelector('.hp').innerText = `HP：${hero.stats.hp}`
+                    document.querySelector('.move_speed').innerText = `Move Speed：${hero.stats.movespeed}`
+                    document.querySelector('.spell_block').innerText = `Spell Block：${hero.stats.spellblock}`
+                    document.querySelector('.attack_range').innerText = `Attack Range：${hero.stats.attackrange}`
 
                 }
                 heroCard.querySelector('.card-text').innerText = hero.blurb
@@ -103,3 +103,5 @@
 
     </script>
 </body>
+
+</html>
