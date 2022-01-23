@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="buttons">
+        <button id="start_btn">Game Start</button>
+        <button id="answer_btn">Show Answer</button>
+    </div>
+    <hr>
+    <div>Enter your guess below: </div>
+    <input id="input_column" type="text">
+    <button id="guess_btn">Guess !</button>
+
+    <script>
+
+        let answer = [];
+        document.getElementById('start_btn').onclick = function gameStarted() {
+            let input_column = document.getElementById('input_column')
+            let pool = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+            if (answer.length > 0) {
+                answer.splice(0,answer.length)}
+            for (let i = 0; i < 4; i++) {
+                let index = Math.floor(Math.random() * (pool.length))
+                answer.push(pool[index])
+                pool.splice(index, 1)
+
+                // function getRandom(min, max) {
+                //     return Math.floor(Math.random() * (max - min) + min)
+                // }
+            }
+        }
+
+        document.getElementById('guess_btn').onclick = function guess() {
+            let a = 0
+            let b = 0
+            input_column.value.split("").forEach((num, idx) => {
+                let index = answer.indexOf(num)
+                if (index != -1) {
+                    if (index == idx) {
+                        a++;
+                    } else {
+                        b++;
+                    }
+                }
+            });
+            alert(`${a}a ${b}b`)
+        }
+
+        document.getElementById('answer_btn').onclick = function getAnswer() {
+            // console.log(answer) => output : ['6', '2', '1', '8']
+            // answer.forEach(x => console.log(x));
+            alert(`Answer is ${answer.join('')}`) //  => output : 6218
+        }
+
+    </script>
+</body>
+</html>
