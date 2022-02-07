@@ -18,7 +18,8 @@
             width: 150px;
             border-radius: 50%;
         }
-        img{
+
+        img {
             width: 200px;
         }
 
@@ -43,10 +44,11 @@
             text-align: center;
             color: chocolate;
         }
-        #title{
+
+        #title {
             font-size: 36px;
             text-align: center;
-            color:black;
+            color: black;
         }
     </style>
 </head>
@@ -227,10 +229,10 @@
             },
         ]
 
-        let steps = 0 //剩下要走的步數
-        let allSteps = 0 //全部的步數
-        let currentIndex = 0 //目前走到哪一格
-        let speed = 100 //速率(越大代表越慢)
+        let steps = 0
+        let allSteps = 0
+        let currentIndex = 0
+        let speed = 100
 
         //DOM
         let column = document.querySelectorAll('[box-id]')
@@ -239,9 +241,7 @@
         const titleShow = document.querySelector('#title')
         const img = document.querySelector('img')
 
-        //Window.onlord
         window.onload = function () {
-
             //塞資料 into
             column.forEach(box => {
                 let id = box.getAttributeNode('box-id').value
@@ -252,17 +252,13 @@
                 box.appendChild(pic)
             })
 
-            //按下Start
             startBtn.onclick = function () {
 
-                //每次開始速度重新整理一次
                 speed = 100
 
                 let random = Math.floor(Math.random() * brickData.length) + 1
-                //steps剩下要走的步數
-                // steps = random //v1
-                steps = random + (3 * column.length) //v2
-                //allSteps全部的步數,為了要接應底下的方法
+
+                steps = random + (3 * column.length)
                 allSteps = steps
                 turnAround()
             }
@@ -275,7 +271,7 @@
                 if (currentIndex >= column.length)
                     currentIndex = 0
 
-                    column[currentIndex].classList.add('active')
+                column[currentIndex].classList.add('active')
                 steps--
 
                 if (steps > 0) {
@@ -283,7 +279,7 @@
                     if (steps < Math.floor(allSteps / 3))
                         speed += 10
                 } else {
-                    let name =  brickData[currentIndex].title
+                    let name = brickData[currentIndex].title
                     titleShow.innerText = ` ${name} `
                     let val = brickData[currentIndex].target()
                     numberShow.innerText = ` ${val} `
