@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,20 @@
     <title>蝦皮購物｜花得更少買得更好</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"
+        integrity="sha512-fzff82+8pzHnwA1mQ0dzz9/E0B+ZRizq08yZfya66INZBz86qKTCt9MLU0NCNIgaMJCgeyhujhasnFUsYMsi0Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>蝦皮購物 | 花得更少買得更好</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <div class="whole-content-wrapper">
         <header>
@@ -38,7 +51,8 @@
                     </div>
                     <div class="middle-column">
                         <div class="search">
-                            <input class="search-bar" type="text" name="search" id="search" placeholder="  愛買超級品牌日｜買就送$1,688">
+                            <input class="search-bar" type="text" name="search" id="search"
+                                placeholder="  愛買超級品牌日｜買就送$1,688">
                             <button class="search-btn">
                                 <i class="fas fa-search"></i>
                             </button>
@@ -64,11 +78,19 @@
             <div class="first-banner">
                 <div class="first-banner-promotion">
                     <div class="first-banner-promotion-left">
-                        <a class="first-banner-silde-left" onclick="plusDivs(-1)">◀</a>
-                        <a class="first-banner-silde-right" onclick="plusDivs(1)">▶</a>
                         <img class="mySlides" src="./photos/asset 5.png">
                         <img class="mySlides" src="./photos/asset 6.png">
                         <img class="mySlides" src="./photos/asset 7.png">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
                     <div class="first-banner-promotion-right">
                         <div class="first-banner-promotion-right-upper">
@@ -80,17 +102,39 @@
                     </div>
                 </div>
                 <figure class="first-banner-icon-bar">
-                    <a class="first-banner-icon" href="#"><img src="./photos/red cart.png"><figcaption>免運！蝦皮直送</figcaption></a>
-                    <a class="first-banner-icon" href="#"><img src="./photos/cart.png"><figcaption>蝦皮超市</figcaption></a>
-                    <a class="first-banner-icon" href="#"><img src="./photos/shopee-coin.png"><figcaption>現領購物金</figcaption></a>
-                    <a class="first-banner-icon" href="#"><img src="./photos/3C.png"><figcaption>蝦皮3C家電</figcaption></a>
-                    <a class="first-banner-icon" href="#"><img src="./photos/hanger.png"><figcaption>蝦時尚</figcaption></a>
-                    <a class="first-banner-icon" href="#"><img src="./photos/men's.png"><figcaption>男人館</figcaption></a>
-                    <a class="first-banner-icon" href="#"><img src="./photos/3C.png"><figcaption>蝦皮3C家電</figcaption></a>
-                    <a class="first-banner-icon" href="#"><img src="./photos/buyTogether.png"><figcaption>蝦皮團購</figcaption></a>
-                    <a class="first-banner-icon" href="#"><img src="./photos/global.png"><figcaption>蝦皮海外直送</figcaption></a>
-                    <a class="first-banner-icon" href="#"><img src="./photos/tag.png"><figcaption>蝦皮超便宜</figcaption></a>
-                    <a class="first-banner-icon" href="#"><img src="./photos/discount.png"><figcaption>最強活動合集</figcaption></a>
+                    <a class="first-banner-icon" href="#"><img src="./photos/red cart.png">
+                        <figcaption>免運！蝦皮直送</figcaption>
+                    </a>
+                    <a class="first-banner-icon" href="#"><img src="./photos/cart.png">
+                        <figcaption>蝦皮超市</figcaption>
+                    </a>
+                    <a class="first-banner-icon" href="#"><img src="./photos/shopee-coin.png">
+                        <figcaption>現領購物金</figcaption>
+                    </a>
+                    <a class="first-banner-icon" href="#"><img src="./photos/3C.png">
+                        <figcaption>蝦皮3C家電</figcaption>
+                    </a>
+                    <a class="first-banner-icon" href="#"><img src="./photos/hanger.png">
+                        <figcaption>蝦時尚</figcaption>
+                    </a>
+                    <a class="first-banner-icon" href="#"><img src="./photos/men's.png">
+                        <figcaption>男人館</figcaption>
+                    </a>
+                    <a class="first-banner-icon" href="#"><img src="./photos/3C.png">
+                        <figcaption>蝦皮3C家電</figcaption>
+                    </a>
+                    <a class="first-banner-icon" href="#"><img src="./photos/buyTogether.png">
+                        <figcaption>蝦皮團購</figcaption>
+                    </a>
+                    <a class="first-banner-icon" href="#"><img src="./photos/global.png">
+                        <figcaption>蝦皮海外直送</figcaption>
+                    </a>
+                    <a class="first-banner-icon" href="#"><img src="./photos/tag.png">
+                        <figcaption>蝦皮超便宜</figcaption>
+                    </a>
+                    <a class="first-banner-icon" href="#"><img src="./photos/discount.png">
+                        <figcaption>最強活動合集</figcaption>
+                    </a>
                 </figure>
             </div>
             <div class="main-content">
@@ -440,32 +484,16 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
 
     </div>
-    
-    <script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
-        
-        function plusDivs(n) {
-            showDivs(slideIndex += n);
-        }
-        
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            if (n > x.length) {slideIndex = 1}    
-            if (n < 1) {slideIndex = x.length} ;
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";  
-            }
-            x[slideIndex-1].style.display = "block";  
-        }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
 <footer>
 
 </footer>
+
 </html>

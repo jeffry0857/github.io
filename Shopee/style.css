@@ -2,6 +2,9 @@
     width: 100%;
     /* margin: auto; */
 }
+header{
+    background: linear-gradient(-180deg,#f53d2d,#f63);
+}
 .nav-bar-content a{
     text-decoration: none;
     color: white;
