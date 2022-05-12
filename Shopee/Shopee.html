@@ -8,18 +8,10 @@
     <title>蝦皮購物｜花得更少買得更好</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"
-        integrity="sha512-fzff82+8pzHnwA1mQ0dzz9/E0B+ZRizq08yZfya66INZBz86qKTCt9MLU0NCNIgaMJCgeyhujhasnFUsYMsi0Q=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>蝦皮購物 | 花得更少買得更好</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 
 <body>
@@ -78,19 +70,30 @@
             <div class="first-banner">
                 <div class="first-banner-promotion">
                     <div class="first-banner-promotion-left">
-                        <img class="mySlides" src="./photos/asset 5.png">
-                        <img class="mySlides" src="./photos/asset 6.png">
-                        <img class="mySlides" src="./photos/asset 7.png">
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
+
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="./photos/asset 5.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./photos/asset 6.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./photos/asset 7.png" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
                     </div>
                     <div class="first-banner-promotion-right">
                         <div class="first-banner-promotion-right-upper">
@@ -101,7 +104,7 @@
                         </div>
                     </div>
                 </div>
-                <figure class="first-banner-icon-bar">
+                <figure class="first-banner-icon-bar mt-4">
                     <a class="first-banner-icon" href="#"><img src="./photos/red cart.png">
                         <figcaption>免運！蝦皮直送</figcaption>
                     </a>
@@ -143,7 +146,7 @@
                 </div>
                 <div class="selected-brand">
                     <div class="selected-brand-header">
-                        <a href="#"><img src="./photos/head.jpeg"></a>
+                        <a href="#"><img class="selected-brand-header-img" src="./photos/head.jpeg"></a>
                     </div>
                     <div class="selected-brand-content">
                         <div class="selected-brand-content-title">
@@ -211,18 +214,6 @@
                                     </div>
                                     <div class="discount-tag">
                                         9.5折
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="div"></div>
-                            <div class="selected-brand-content-item">
-                                <a href="#">
-                                    <img src="./photos/xiaomi.jpg">
-                                    <div class="price">
-                                        $365
-                                    </div>
-                                    <div class="discount-tag">
-                                        7.8折
                                     </div>
                                 </a>
                             </div>
@@ -418,6 +409,9 @@
                                 <div class="limited-sale-item-discount">
                                     8.9折
                                 </div>
+                                <div class="sale-progress-bar">
+                                    已售出13
+                                </div>
                             </a>
                         </div>
                         <div class="limited-sale-item">
@@ -429,7 +423,9 @@
                                 <div class="limited-sale-item-discount">
                                     7.8折
                                 </div>
-                                <img class="promote" src="./photos/11899.png">
+                                <div class="sale-progress-bar">
+                                    已售出2
+                                </div>
                             </a>
                         </div>
                         <div class="limited-sale-item">
@@ -440,6 +436,9 @@
                                 </div>
                                 <div class="limited-sale-item-discount">
                                     7.9折
+                                </div>
+                                <div class="sale-progress-bar">
+                                    已售出1
                                 </div>
                             </a>
                         </div>
@@ -452,6 +451,9 @@
                                 <div class="limited-sale-item-discount">
                                     9折
                                 </div>
+                                <div class="sale-progress-bar">
+                                    已售出104
+                                </div>
                             </a>
                         </div>
                         <div class="limited-sale-item">
@@ -463,7 +465,9 @@
                                 <div class="limited-sale-item-discount">
                                     5.9折
                                 </div>
-                                <img class="promote" src="./photos/11899.png">
+                                <div class="sale-progress-bar">
+                                    已售出68
+                                </div>
                             </a>
                         </div>
                         <div class="limited-sale-item">
@@ -475,25 +479,88 @@
                                 <div class="limited-sale-item-discount">
                                     4.5折
                                 </div>
-                                <img class="promote" src="./photos/11899.png">
                                 <div class="sale-progress-bar">
-                                    已售出1
+                                    已售出19
                                 </div>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
+        <div class="modal fade" id="admodal" role="dialog" tabindex="-1">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="carousel slide" data-ride="carousel" id="adCarousel">
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <h1>This is Slide 1</h1>
+                                    <h5>Same is shown of text, but you can use any html content imges, videos, etc
+                                        inside this box</h5>
+                                </div>
+                                <div class="item">
+                                    <h1>This is Slide 2</h1>
+                                    <h5>You can choose to have carousal or just a single html content</h5>
+                                </div>
+                                <div class="item">
+                                    <h1>This is Slide 3</h1>
+                                    <h5>Carousal is a good way to show ads, to keep user engaged.</h5>
+                                </div>
+                                <div class="item">
+                                    <h1>This is Slide 4</h1>
+                                    <h5>Okay</h5>
+                                </div>
+                                <div class="item">
+                                    <h1>This is Slide 5</h1>
+                                    <h5>Enough, Done !</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" data-dismiss="modal" type="button">No, Close this popup
+                            now.</button><br class="visible-xs">
+                        <br class="visible-xs">
+                        <button class="btn btn-success" type="button">Yes, I would love to click on Ads.</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
 
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-</body>
-<footer>
 
+    <script>
+        if (!sessionStorage.adModal) {
+            setTimeout(function () {
+                $('#admodal').find('.item').first().addClass('active');
+                $('#admodal').modal({
+                    backdrop: 'static',
+                    keyboard: false
+                });
+            }, 3000);
+            $('#adCarousel').carousel({
+                interval: 4000,
+                cycle: true
+            });
+
+            $("#buttonSuccess").click(function (e) {
+                e.preventDefault();
+                var url = $(this).attr("href");
+                var win = window.open(url, '_blank');
+                $('#admodal').modal('hide');
+            })
+            sessionStorage.adModal = 1;
+    </script>
+
+</body>
+
+<footer>
 </footer>
 
 </html>

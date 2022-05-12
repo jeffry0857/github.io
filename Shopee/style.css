@@ -2,9 +2,6 @@
     width: 100%;
     /* margin: auto; */
 }
-header{
-    background: linear-gradient(-180deg,#f53d2d,#f63);
-}
 .nav-bar-content a{
     text-decoration: none;
     color: white;
@@ -66,7 +63,7 @@ header{
     height: 90px;
 }
 .second-nav-content{
-    width: 95%;
+    width: 100%;
     margin: auto;
     display: flex;
 }
@@ -125,7 +122,7 @@ header{
     margin-top: 30px;
 }
 .first-banner-promotion{
-    width: 95%;
+    width: 100%;
     margin: auto;
     display: flex;
 }
@@ -145,10 +142,11 @@ header{
     width: 799px;
 }
 .first-banner-promotion-right{
+    height: 241px;
     margin-left: 5px;
 }
 .first-banner-promotion-right img{
-    width: 394px;
+    width: 399px;
 }
 .first-banner-icon-bar{
     padding-bottom: 20px;
@@ -172,7 +170,7 @@ figcaption{
     margin-top: 5px;
 }
 .main-content{
-    width: 95%;
+    width: 100%;
     margin: auto;
 }
 .redeem-info{
@@ -245,6 +243,12 @@ figcaption{
 .selected-brand-content-items img{
     width: 194px;
     padding-bottom: 20px;
+}
+.selected-brand-header-img{
+    width: -webkit-fill-available;
+}
+.selected-brand-bottom img{
+    width: -webkit-fill-available;
 }
 .categories{
     background-color: #fff;
@@ -326,7 +330,7 @@ figcaption{
     height: 40px;
     position: absolute;
     left: 169px;
-    bottom: 176px;
+    bottom: 209px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -354,6 +358,7 @@ figcaption{
     width: 155px;
     height: 18px;
     border-radius: 8px;
+    margin-left: 20px;
 }
 .limited-sale-item-price{
     color: rgb(238, 77, 45);
