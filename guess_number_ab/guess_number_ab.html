@@ -6,8 +6,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="./fun_game.css">
-    <title>fun_game</title>
+    <title>猜數字遊戲</title>
+    <style>
+        body {
+            background-color: #42aec7;
+        }
+
+        .title {
+            color: #061c21;
+        }
+
+        #list1 .form-control {
+            border-color: transparent;
+            border-radius: 5px;
+            width: 295px;
+        }
+
+        #list1 .form-control:focus {
+            border-color: transparent;
+            box-shadow: none;
+        }
+
+        .todo_input {
+            width: 260px;
+        }
+
+        .card {
+            background-color: #42aec7;
+            border: 0px none;
+        }
+
+        .card-body {
+            padding: 0;
+        }
+
+        #add_btn {
+            background-color: #a90000;
+            color: #42aec7;
+            width: 234px;
+            height: 100%;
+        }
+
+        .btn {
+            background-color: #a90000;
+            color: #42aec7;
+            width: 115px;
+        }
+
+        #list1 .select-input.form-control[readonly]:not([disabled]) {
+            background-color: #a90000;
+        }
+
+        .accordion-item .accordion-button {
+            background-color: #42aec7;
+            color: #a90000;
+            border: none;
+        }
+
+        .accordion-body {
+            padding: 0px;
+        }
+
+        #accordionPanelsStayOpenExample {
+            background-color: #42aec7;
+            color: #a90000;
+            border: none;
+        }
+
+        .rule {
+            background-color: #42aec7;
+            color: #a90000;
+            font-size: 20px;
+            padding: 23px 23px 23px 23px;
+            margin: 0;
+        }
+
+        .hint {
+            color: #a90000;
+            font-size: 16px;
+            padding: 0px 23px 23px 23px;
+        }
+
+        #input_column {
+            font-size: 16px;
+            width: 100%;
+            border: none;
+        }
+
+        #guess_btn {
+            font-size: 16px;
+        }
+
+        .left_area {
+            background-color: #42aec7;
+            border-radius: .75rem
+        }
+
+        .right_area {
+            background-color: #1b1908;
+            border-radius: .75rem
+        }
+
+        #start_btn {
+            font-size: 16px;
+        }
+
+        .game_area {
+            width: 415px;
+            height: 40px;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,7 +132,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="panelsStayOpen-headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
                                 aria-controls="panelsStayOpen-collapseOne">
                                 規則說明
                             </button>
@@ -38,7 +146,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <p class="rule">規則說明：先按開始遊戲，再鍵入四個數字猜數。如果猜對一個數字且位置相同則得1A，如果猜對一個數字，但位置不同，則得1B。目標是猜數得4A。</p> -->
                 <p class="hint">
                     ※ 小提示：右方貼心的備忘錄功能讓你記下自己到底猜過什麼數字
                 </p>
@@ -48,9 +155,6 @@
                     <button id="guess_btn" class="btn">猜</button>
                 </div>
                 <input id="input_column" type="text" placeholder="先點擊上方開始遊戲後，輸入四位數字">
-                <!-- <div class="game_area d-flex justify-content-between ps-3">
-                    <button id="guess_btn" class="btn">猜</button>
-                </div> -->
             </div>
         </div>
         <div class="row w-50 right_area">
@@ -86,11 +190,144 @@
         </div>
     </div>
 
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    <script src="./fun_game.js"></script>
+    <script>
+        const add_btn = document.querySelector('#add_btn')
+        const todo_input = document.querySelector('.todo_input')
+        const todoWrap = document.querySelector('.todo_wrap')
+        let todolist = [] //先在全域宣告一個空的todolist 便於從localstorage裡面取資料放進來
+
+        window.onload = function () {
+            load_to_do_list() //每次載入網頁時, 同時啟動localstorage
+        }
+
+        add_btn.addEventListener('click', addtodo) //按下去後啟動addtodo這個function
+        function addtodo(event) {
+            let input_value = { title: todo_input.value }
+            if (todo_input.value != "") {   //輸入值不可為空
+                todolist.push(input_value)
+                localStorage.setItem("datalist", JSON.stringify(todolist))
+                load_to_do_list()
+                todo_input.value = "" //每次輸入完存到localstorage後清空input裡的東西
+            }
+        }
+
+        function edit_btnfn(ii, nowinput) { //其實可以給i就好,但為避免跟下面的i混淆,所以給ii
+            todolist = JSON.parse(localStorage.getItem('datalist'))
+            todolist[ii].title = nowinput
+            localStorage.setItem("datalist", JSON.stringify(todolist)) //update最新資料onto localStorage
+            load_to_do_list()
+        }
+
+        function delete_btnfn(ii) {
+            todolist.splice(ii, 1)
+            console.log(todolist)
+            localStorage.setItem("datalist", JSON.stringify(todolist)) //update最新資料onto localStorage
+            load_to_do_list()
+        }
+
+        function addtodolist(d, i) //d = data, i = index
+        {
+            const todo_wrap = document.createElement('div')
+            todo_wrap.classList.add('todo_wrap', 'd-flex', 'justify-content-evenly')
+            const todo_div = document.createElement('div')
+            todo_div.classList.add('todo_div', 'd-flex', 'justify-content-between', 'mb-3')
+
+            const show_input = document.createElement('input')
+            show_input.classList.add('form-control', 'show_input')
+            show_input.type = 'text'
+            show_input.value = d.title
+            show_input.disabled = true
+            todo_div.append(show_input)
+
+            const edit_btn = document.createElement('button')
+            edit_btn.classList.add('btn')
+            edit_btn.id = `edit_btn_${i}` //以i作為索引, 我要編輯第 i 筆資料
+            edit_btn.type = 'button'
+            edit_btn.innerText = '編輯'
+            edit_btn.addEventListener('click', () => {
+                if (edit_btn.innerText == '編輯') //如果現在顯示的狀態是Edit
+                {
+                    show_input.disabled = false //也就是show_input.able = true
+                    edit_btn.innerText = '儲存' //編輯按鈕的上的狀態從 Edit => Save
+                    edit_btn.setAttribute('class', 'btn btn-success')
+                }
+                else {
+                    show_input.disabled = true
+                    edit_btn.innerText = '編輯'
+                    edit_btn.setAttribute('class', 'btn btn-warning')
+                    edit_btnfn(i, show_input.value)
+                }
+            })
+            todo_div.append(edit_btn)
+
+            const delete_btn = document.createElement('button')
+            delete_btn.classList.add('btn')
+            delete_btn.id = `delete_btn`
+            delete_btn.type = 'button'
+            delete_btn.innerText = '刪除'
+            delete_btn.addEventListener('click', () => { delete_btnfn(i) })
+            todo_div.append(delete_btn)
+            todoWrap.append(todo_div)
+        }
+
+        function load_to_do_list() {
+            todolist = JSON.parse(localStorage.getItem('datalist'))
+            // console.log(todolist);
+            todoWrap.innerHTML = ""
+            if (todolist != null)    //給todolist一個空值, 如果todolist不是空值, 將資料逐筆迭代出來然後裝進addtodolist
+            {
+                todolist.forEach((data, index) => {
+                    addtodolist(data, index)
+                })
+            }
+            console.log(addtodolist)
+        }
+
+        let answer = [];
+        document.getElementById('start_btn').onclick = function gameStarted() {
+            let input_column = document.getElementById('input_column')
+            let pool = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+            if (answer.length > 0) {
+                answer.splice(0, answer.length)
+            }
+            for (let i = 0; i < 4; i++) {
+                let index = Math.floor(Math.random() * (pool.length))
+                answer.push(pool[index])
+                pool.splice(index, 1)
+            }
+        }
+
+        document.getElementById('guess_btn').onclick = function guess() {
+            let a = 0
+            let b = 0
+            if (answer == '') {
+                alert('請先按遊戲開始')
+            } else {
+                input_column.value.split("").forEach((num, idx) => {
+                    let index = answer.indexOf(num)
+                    if (index != -1) {
+                        if (index == idx) {
+                            a++;
+                        } else {
+                            b++;
+                        }
+                    }
+                });
+                alert(`${a}A ${b}B`)
+            }
+        }
+
+        document.getElementById('answer_btn').onclick = function getAnswer() {
+            if (answer == '') {
+                alert('請先按遊戲開始')
+            } else {
+                alert(`答案揭曉： ${answer.join('')}`)
+            }
+        }
+    </script>
 </body>
 
 </html>
