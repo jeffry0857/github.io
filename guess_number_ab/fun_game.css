@@ -1,0 +1,87 @@
+body {
+    background-color: #42aec7;
+}
+.title {
+    color: #061c21;
+}
+#list1 .form-control {
+    border-color: transparent;
+    border-radius: 5px;
+    width: 295px;
+}
+#list1 .form-control:focus {
+    border-color: transparent;
+    box-shadow: none;
+}
+.todo_input {
+    width: 260px;
+}
+.card {
+    background-color: #42aec7;
+    border: 0px none;
+}
+.card-body {
+    padding: 0;
+}
+#add_btn {
+    background-color: #a90000;
+    color: #42aec7;
+    width: 234px;
+    height: 100%;
+}
+.btn {
+    background-color: #a90000;
+    color: #42aec7;
+    width: 115px;
+}
+#list1 .select-input.form-control[readonly]:not([disabled]) {
+    background-color: #a90000;
+}
+.accordion-item .accordion-button {
+    background-color: #42aec7;
+    color: #a90000;
+    border: none;
+}
+.accordion-body {
+    padding: 0px;
+}
+#accordionPanelsStayOpenExample {
+    background-color: #42aec7;
+    color: #a90000;
+    border: none;
+}
+.rule {
+    background-color: #42aec7;
+    color: #a90000;
+    font-size: 20px;
+    padding: 23px 23px 23px 23px;
+    margin: 0;
+}
+.hint {
+    color: #a90000;
+    font-size: 16px;
+    padding: 0px 23px 23px 23px;
+}
+#input_column {
+    font-size: 16px;
+    width: 100%;
+    border: none;
+}
+#guess_btn {
+    font-size: 16px;
+}
+.left_area {
+    background-color: #42aec7;
+    border-radius: .75rem
+}
+.right_area {
+    background-color: #1b1908;
+    border-radius: .75rem
+}
+#start_btn {
+    font-size: 16px;
+}
+.game_area {
+    width: 415px;
+    height: 40px;
+}
